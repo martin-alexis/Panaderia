@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="eS">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Despensa </title>
+  <link rel="icon" href="../static/images/logo%20panaderia.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <a href="https://api.whatsapp.com/send?phone=543329601836" class="btn-wsp" target="_blank"><i
+      class="bi bi-whatsapp"></i></a>
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="{{ url_for('main.main') }}#"><img src="../static/images/logo%20panaderia.png" alt="Logo Panaderia RAS"></a>
+      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('main.main') }}#carousel">INICIO</a>
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PRODUCTOS
+            </a>
+            <ul class="dropdown-menu border-0">
+              <li><a class="dropdown-item" href="{{ url_for('main.productos_despensa') }}">DESPENSA</a></li>
+              <li><a class="dropdown-item" href="{{ url_for('main.productos_panaderia') }}">PANADERIA</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.main') }}#galeria">GALERIA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('main.main') }}#nosotros">¿QUIÉNES SOMOS?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="portada d-flex justify-content-center align-items-center">
+    <div class="imagen-portada-almacen"></div>
+    <div class="contenido-texto ">
+      <div>
+        <h3 class="">DESPENSA</h3>
+      </div>
+    </div>
+  </div>
+
+
+
+  <section class="cards position-relative">
+    <div class="container py-5">
+      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4 py-5">
+
+        <div class="col">
+          <div class="card no-border rounded">
+            <img src="../static/images/cards/despensa/descarga%20(1).jpeg" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ACEITE CAÑUELAS 1,5LT</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
+              <p class="precio">$ 2860,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/descarga%20(2).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">LIMPIADOR POETT LAVANDA 900 CC</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>
+              <p class="precio">$ 1170,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/descarga%20(3).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">LAVANDINA AYUDIN 1LT</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
+              <p class="precio">$ 980,00 </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/descarga%20(4).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">FIDEOS 308 500G</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
+              <p class="precio">$ 1530,00 </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/descarga%20(5).jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">GALLETITAS PITUSAS 160G</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
+              <p class="precio">$ 710,00 </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/descarga.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HARINA MAROLIO 000 1KG </h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
+              <p class="precio">$ 650,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <img src="../static/images/cards/despensa/image%2027.png" class="card-img-top" alt="...">
+            <div class="card-body container">
+              <h5 class="card-title">ARROZ MAROLIO 1KG</h5>
+              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>
+              <p class="precio">$ 2080,00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col">
+          <div class="card">
+              <img src="images/cards/image 23.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">PASTELES</h5>
+                <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>
+                <p class="precio">$ 900,00 kg</p>                      
+            </div>
+          </div> -->
+      </div>
+
+
+    </div>
+    </div>
+  </section>
+
+  <div class=" contacto container-fluid mt-3 pb-5">
+    <div class=" row  " id="">
+      <div class="col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center">
+        <div class=" contact-item pt-3 ps-2">
+          <div class="text"> <i class="bi bi-telephone-fill"></i>
+            Llamanos
+          </div>
+          <div class="ci-text">
+            <a>3329-601836</a>
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center ">
+        <div class=" contact-item pt-3 ps-2">
+          <div class="text"> <i class="bi bi-clock-fill"></i>
+            Abrimos
+          </div>
+          <div class="ci-text">
+            Lunes a Sábado: 7 a 13 hs - 16 a 21:30 hs. <br>
+            Domingos: Cerrado.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white ">
+
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.5)">
+      © 2024 Copyright:
+      <a class="text-white text-decoration-none ">Panadería & Despensa RAS</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="../static/main.js"></script>
+
+</body>
+
+</html>

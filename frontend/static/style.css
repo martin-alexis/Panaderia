@@ -1,0 +1,575 @@
+/* ******* Bootstrap Styles ******* */
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Cambiar la fuente a Montserrat */
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+/*  NAVBAR & CAROUSEL*/
+
+.navbar {
+    transition: 0.5s;
+    justify-content: space-around;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 60px;
+}
+
+.bg-light {
+    /* background-color: #A30202 !important;  */
+    background-color: transparent !important;
+    background-image: none !important; 
+}
+
+.dropdown-menu {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+
+}
+
+.dropdown-item:hover {
+    background-color: transparent; 
+
+}
+
+.dropdown-menu li a{
+    font-weight: lighter;
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.nav-link {
+    color: white;
+    font-size: 16px;
+}
+
+.navbar-nav button {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.navbar-light .navbar-brand {
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+.w-100 {
+	height: 100vh;
+}
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	/* background:  rgba(220, 53, 69, 0.5) */
+}
+
+/*  NAVBAR SCROLL   */
+
+#navbar.scroll {
+    background: #A30202 !important;
+}
+
+#navbar.scroll .navbar-nav{
+    background: transparent !important;
+}
+/*  CAROUSEL    */
+
+.carousel-item img {
+    /* width: 100%; 
+    height: 650px;  */
+    height: 100vh;
+    min-height: 300px; 
+    
+}
+
+.carousel-caption {
+    bottom: 220px;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+
+}
+
+.carousel-caption button {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 30px;
+	display: inline-block;
+	color: #fff;
+	margin-top: 15px;
+}
+
+@media only screen and (max-width: 990px) {
+
+   
+	.navbar-nav {
+		text-align: center;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+    .dropdown-menu {
+		text-align: center;
+        background: transparent; 
+
+    }
+    .dropdown-menu a{
+        font-weight: lighter;
+
+		/* background: rgba(0, 0, 0, 0.5); */
+	}
+	.carousel-caption {
+		bottom: 250px;
+	}
+	.carousel-caption h5 {
+		font-size: 30px;
+	}
+	.carousel-caption button {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+}
+
+
+
+/* .carousel .carousel-item .d-item {
+    height: 560px;
+} */
+
+.d-img {
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(0.6)
+    
+}
+
+/*  PRODUCTOS  */
+
+
+ /* .productos .container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+   */
+
+   /* @media (min-width: 576px) {
+    #productos.container-fluid {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  } */
+
+.productos .descripcion {
+    height: 250px;
+    width: auto;
+}
+
+.productos .descripcion h2 {
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    color: #B11338;
+    font-weight: 600;
+}
+.productos .descripcion p {
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+/* /* .productos .tipo-producto {
+    padding: 60px;
+} */
+
+.productos .cont_img {
+    width: 100%;    
+}
+.productos .cont_img img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover; /* Escalar la imagen para cubrir todo el contenedor */
+
+}
+
+.productos .tipo-producto {
+    padding: 50px;
+}
+
+/* .productos .imagen {
+    background-image:url(images/facturas.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: auto;
+}  */
+
+.icon-responsive-pan {
+width: 100px;
+height: auto;
+}
+.icon-responsive-medialuna {
+width: 100px;
+height: auto;
+}
+.bi-cart3 {
+    font-size: 4rem;
+    /* color: #B11338; */
+}
+
+.productos .producto-row h3 {
+    color:#B11338;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+}
+
+.productos .producto-row p {
+    letter-spacing: 1px;
+    font-weight: 500;
+    
+}
+
+.producto-row {
+    transition: transform 0.3s ease;
+}
+.producto-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.2); */
+}
+
+/*  NOSOTROS    */
+
+.nosotros {
+    background-color: #F4F6FA;
+    padding-top: 80px;
+}
+
+.nosotros h2{
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-size: 35px;
+    color: #B11338;
+}
+.nosotros .historia p{
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    font-size: 20px;
+    font-size: 20px;
+
+}
+
+
+.nosotros .imagen{
+    position: relative;
+}
+.nosotros .imagen .img{
+    background-image: url(images/panaderia\ afuera.jpg);
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 7px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* .nosotros .imagen {
+    width: 80%;
+    height: 210px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.mis-servicios .container .imagen  {
+  
+}
+
+.nosotros img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+    border-radius: 50%;
+
+} */
+/*  UBICACION   */
+.ubicacion {
+    background-color:#fff;
+}
+.mapa {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden; /* Para asegurar que no se muestren partes de la imagen filtrada fuera del contenedor */
+  }
+  
+.mapa .maps {
+    width: 100%;
+    height: 100%;
+
+}
+
+.contacto  .bi-telephone-fill, .bi-clock-fill{
+    color: #B11338;
+}
+
+
+
+.contacto  .text {
+    color: #000;
+    font-weight: bold;
+}
+/*  GALERIA */
+
+.galeria {
+    padding-top: 50px;
+}
+.galeria .descripcion h2 {
+    letter-spacing: 1.5px;
+    font-size: 40px;
+    color: #B11338;
+    font-weight: 600;
+}
+.galeria .descripcion p {
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    font-size: 20px;
+
+}
+
+.galeria .col-sm-2, .col-md-3, .col-lg-4, .col-xl-3 {
+    margin: 0 !important;
+    padding: 20px;
+}
+
+.galeria .cont_img img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 7px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover; /* Escalar la imagen para cubrir todo el contenedor */
+
+}
+
+.galeria .cont_img img:hover {
+    border: 5px solid transparent;
+}
+
+#gallery-modal .modal-img{
+	width: auto;
+    max-height: 600px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.ubicacion p {
+    font-size: 20px;
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 775px) {
+    /* .icon-responsive-pan {
+        width: 195px;
+        height: auto;
+      }
+
+    .icon-responsive-medialuna {
+        width: 145px;
+        height: auto;
+      }
+     */
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+
+/*  PRODUCTOS PANADERIA   */
+
+/* .d-item {
+    height: 560px;
+} */
+
+
+
+
+
+.portada {
+    position: relative;
+    height: 70vh;
+    overflow: hidden; /* Para asegurar que no se muestren partes de la imagen filtrada fuera del contenedor */
+  }
+  
+.portada .imagen-portada {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/image\ \(5\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.6); 
+}
+
+.portada .imagen-portada-almacen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/image\ \(6\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.6); 
+}
+
+.portada .contenido-texto {
+    position: relative;
+    color: white; 
+}
+
+.portada .contenido-texto h3{
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+/* .portada h3 {
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+} */
+
+/*  CARDS   */
+
+.cards .card-img-top{
+    /* border-radius: 50px;
+    padding: 20px; */
+    /* height: 40vh; */
+    height: 32vh;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+.cards .card{
+    /* border-radius: 30px; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+/* .card-body{
+    padding: 25px;
+    margin-top: -15px;
+} */
+}
+
+.cards .bi-check-circle-fill {
+    color: green;
+}
+
+.cards .bi-x-circle-fill {
+    color: red;
+}
+
+.cards .card-title {
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+
+}
+
+.cards .card-text {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-bottom: 5px;
+    
+}
+
+.cards .precio {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+}
+
+@media only screen and (max-width: 990px) {
+    .cards .card-text {
+        font-size: 15px;   
+    }
+    
+    .cards .card-title {
+        font-size: 1.10rem;
+    
+    }
+}
+
