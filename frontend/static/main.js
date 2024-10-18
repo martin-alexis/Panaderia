@@ -35,17 +35,7 @@ window.addEventListener("scroll", function(){
 	navbar.classList.toggle("scroll", window.scrollY > 0);
   });
 
-/* ENLACES	*/
 
-document.getElementById('producto_panaderia').addEventListener('click', function() {
-window.location.href = 'productos_panaderia.html';
-});
-
-document.getElementById('producto_despensa').addEventListener('click', function() {
-window.location.href = 'productos_despensa.html';
-});
-
- 
  /*	MODAL	*/
  document.addEventListener("click",function (e){
    if(e.target.classList.contains("gallery-item")){

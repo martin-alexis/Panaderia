@@ -2,427 +2,462 @@
 <html lang="eS">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panadería & Despensa RAS </title>
-  <link rel="icon" href="../static/images/logo%20panaderia.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panadería & Despensa RAS </title>
+    <link rel="icon" href="../static/images/logo%20panaderia.png" type="image/x-icon">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
-  <a href="https://api.whatsapp.com/send?phone=543329601836" class="btn-wsp" target="_blank"><i
-      class="bi bi-whatsapp"></i></a>
+<a href="https://api.whatsapp.com/send?phone=543329601836" class="btn-wsp" target="_blank"><i
+        class="bi bi-whatsapp"></i></a>
 
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand" href="{{ url_for('main.main') }}#"><img src="../static/images/logo%20panaderia.png" alt="Logo Panaderia RAS"></a>
-      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ url_for('main.main') }}#carousel">INICIO</a>
+        <a class="navbar-brand" href="{{ url_for('main.main') }}#"><img src="../static/images/logo%20panaderia.png"
+                                                                        alt="Logo Panaderia RAS"></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('main.main') }}#carousel">INICIO</a>
 
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PRODUCTOS
-            </a>
-            <ul class="dropdown-menu border-0">
-              <li><a class="dropdown-item" href="{{ url_for('main.productos_despensa') }}">DESPENSA</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('main.productos_panaderia') }}">PANADERIA</a></li>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        PRODUCTOS
+                    </a>
+                    <ul class="dropdown-menu border-0">
+                        <li><a class="dropdown-item" href="{{ url_for('main.productos_despensa') }}">DESPENSA</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('main.productos_panaderia') }}">PANADERIA</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.main') }}#galeria">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.main') }}#nosotros">¿QUIÉNES SOMOS?</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.main') }}#galeria">GALERIA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.main') }}#nosotros">¿QUIÉNES SOMOS?</a>
-          </li>
-        </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 
 
-  <section id="carousel" class=" carousel min-vh-100">
+<section id="carousel" class=" carousel min-vh-100">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active ">
-          <img src="../static/images/image.png" class="d-block w-100 d-img" alt="...">
-          <div class="carousel-caption   ">
-            <h5>
-              Panadería & Despensa RAS
-            </h5>
-            <a href="{{ url_for('main.main') }}#nosotros"><button class="btn btn-danger">¿Quiénes Somos?</button></a>
-          </div>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <img src="../static/images/image.png" class="d-block w-100 d-img" alt="...">
+                <div class="carousel-caption   ">
+                    <h5>
+                        Panadería & Despensa RAS
+                    </h5>
+                    <a href="{{ url_for('main.main') }}#nosotros">
+                        <button class="btn btn-danger">¿Quiénes Somos?</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item  ">
+                <img src="../static/images/image%20(1).png" class="d-block w-100 d-img" alt="...">
+                <div class="carousel-caption   ">
+                    <h5>
+                        Panadería & Despensa RAS
+                    </h5>
+                    <a href="{{ url_for('main.main') }}#nosotros">
+                        <button class="btn btn-danger">¿Quiénes Somos?</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item  ">
+                <img src="../static/images/facturas.jpg" class="d-block w-100 d-img" alt="...">
+                <div class="carousel-caption   ">
+                    <h5>
+                        Panadería & Despensa RAS
+                    </h5>
+                    <a href="{{ url_for('main.main') }}#nosotros">
+                        <button class="btn btn-danger">¿Quiénes Somos?</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-item  ">
+                <img src="../static/images/Pastafrola.jpeg" class="d-block w-100 d-img" alt="...">
+                <div class="carousel-caption   ">
+                    <h5>
+                        Panadería & Despensa RAS
+                    </h5>
+                    <a href="{{ url_for('main.main') }}#nosotros">
+                        <button class="btn btn-danger">¿Quiénes Somos?</button>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="carousel-item  ">
-          <img src="../static/images/image%20(1).png" class="d-block w-100 d-img" alt="...">
-          <div class="carousel-caption   ">
-            <h5>
-              Panadería & Despensa RAS
-            </h5>
-            <a href="{{ url_for('main.main') }}#nosotros"><button class="btn btn-danger">¿Quiénes Somos?</button></a>
-          </div>
-        </div>
-
-        <div class="carousel-item  ">
-          <img src="../static/images/facturas.jpg" class="d-block w-100 d-img" alt="...">
-          <div class="carousel-caption   ">
-            <h5>
-              Panadería & Despensa RAS
-            </h5>
-            <a href="{{ url_for('main.main') }}#nosotros"><button class="btn btn-danger">¿Quiénes Somos?</button></a>
-          </div>
-        </div>
-
-        <div class="carousel-item  ">
-          <img src="../static/images/Pastafrola.jpeg" class="d-block w-100 d-img" alt="...">
-          <div class="carousel-caption   ">
-            <h5>
-              Panadería & Despensa RAS
-            </h5>
-            <a href="{{ url_for('main.main') }}#nosotros"><button class="btn btn-danger">¿Quiénes Somos?</button></a>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-  </section>
+</section>
 
 
-  <section class="productos mt-5">
+<section class="productos mt-5">
     <div class="container-fluid descripcion d-flex justify-content-center  align-items-center ">
-      <div class=" text-center ">
-        <h2 class="fw-bolder">Nuestros Productos</h2>
-        <p class="">Aquí econtrarás una gran variedad de productos artesanales de gran calidad<br>¡Qué estás esperando!
-        </p>
-      </div>
+        <div class=" text-center ">
+            <h2 class="fw-bolder">Nuestros Productos</h2>
+            <p class="">Aquí econtrarás una gran variedad de productos artesanales de gran calidad<br>¡Qué estás
+                esperando!
+            </p>
+        </div>
     </div>
     <div class="container-fluid mt-3">
-      <div class=" producto-row row  " id="producto_panaderia" role='button'>
+        <a href="{{ url_for('main.productos_panaderia') }}" id="producto_panaderia">
+            <div class=" producto-row row  " role='button'>
 
-        <!-- <div class="col-sm-6 px-0">
-              <img class="img-fluid " src="images/cremona.png" alt="Descripción de la imagen">
-            </div> -->
-        <div class="col-md-6  px-0 ">
-          <div class="cont_img ">
-            <img class="img" src="../static/images/cremona.png" alt="Descripción de la imagen">
-          </div>
-        </div>
-        <div class=" tipo-producto col-md-6 d-flex justify-content-center align-items-center ">
-          <div class="  container text-center pt-3 pb-3 ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" enable-background="new" viewBox="0 0 64 64"
-              id="bread">
-              <path fill="#B11338" fill-rule="evenodd"
-                d="m32.211 4.6953c-2.1228 0.83132-4.3948 2.337-6.7226 4.3281-4.6555 3.9823-9.5196 9.9281-13.303 16.48-3.783 6.5524-6.5019 13.739-7.623 19.762-0.56051 3.0115-0.72818 5.7303-0.38671 7.9844 0.34147 2.2541 1.2271 4.1355 2.9004 5.1016 1.6733 0.96607 3.6528 0.63959 5.4648-0.41797 1.812-1.0576 3.6315-2.8259 5.5097-5.0664 3.11-3.71 6.3507-8.7632 9.4979-14.061 0.2581 0.43278 0.45117 0.89749 0.45117 1.1934v17c0 1.6447 1.3553 3 3 3h22c1.6447 0 3-1.3553 3-3v-17c0-0.53684 0.61308-1.6462 1.1562-2.0684 1.7559-1.3647 2.8434-3.0734 2.8437-4.9316 0-2.7826-2.2961-5.0306-5.5488-6.5625s-7.6243-2.4397-12.451-2.4375c-2.3248 0.0011-4.5403 0.21569-6.58 0.60547 1.3463-2.7095 2.5249-5.3175 3.3945-7.7031 1.0012-2.7468 1.6229-5.2047 1.6328-7.3027 0.0099-2.098-0.6978-3.9753-2.3711-4.9414-1.8049-1.065-4.059-0.67693-5.8652 0.037109zm4.8652 1.6934c0.95593 0.55191 1.3791 1.5047 1.3711 3.2012-8e-3 1.6965-0.55317 3.9973-1.5117 6.627-0.9875 2.7091-2.4395 5.7937-4.0937 9.0098-1.1864 0.34384-2.2973 0.74604-3.2929 1.2148-3.2524 1.5314-5.5488 3.7783-5.5488 6.5586 3.1e-4 1.5837 0.79479 3.0566 2.1152 4.3027-3.2171 5.4369-6.5292 10.621-9.5975 14.281-1.7981 2.1449-3.5191 3.7659-4.9843 4.6211s-2.5011 0.96598-3.457 0.41406c-0.95593-0.55192-1.6317-1.7526-1.9219-3.668-0.29016-1.9154-0.15824-4.4554 0.375-7.3203 0.52394-2.815 1.435-5.9457 2.6562-9.1562l4.4277 2.5566c1.4243 0.82235 3.2753 0.32474 4.0976-1.0996 0.82234-1.4244 0.3267-3.2753-1.0976-4.0977l-5.0292-2.9043c0.57898-1.1964 1.1994-2.3812 1.8515-3.5508l5.1777 2.9902c1.4243 0.82235 3.2753 0.3267 4.0976-1.0977s0.3267-3.2753-1.0976-4.0977l-5.0312-2.9043c0.762-1.1223 1.5514-2.2082 2.3574-3.2598l4.6738 2.6992c1.4243 0.82235 3.2753 0.3267 4.0976-1.0977 0.82234-1.4244 0.3267-3.2753-1.0976-4.0977l-3.748-2.1641c1.3128-1.411 2.6313-2.7027 3.9218-3.8066 2.2145-1.8943 4.3484-3.278 6.1523-3.9844 1.4549-0.6093 3.0957-0.80688 4.1367-0.16992zm-15.582 9.4785 4.1191 2.3789c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-4.4296-2.5566c0.43378-0.53241 0.87106-1.0487 1.3105-1.5547zm-6.0175 8.0742 5.1367 2.9648c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-5.1796-2.9902c0.34234-0.57297 0.68468-1.1454 1.043-1.707zm26.523 2.0586c4.5721-0.0021 8.7 0.88146 11.598 2.2461s4.4023 3.1182 4.4023 4.7539c-2.12e-4 1.0788-0.63 2.2326-2.0722 3.3535-1.065 0.82772-1.9277 2.1446-1.9277 3.6465v17c0 0.5713-0.4287 1-0.99999 1h-22c-0.57129 0-0.99999-0.4287-0.99999-1v-17c0-1.5019-0.86268-2.8188-1.9277-3.6465-1.4422-1.1209-2.072-2.2747-2.0722-3.3535-7e-6 -1.6318 1.5045-3.3836 4.4023-4.748 2.8978-1.3645 7.0251-2.2499 11.598-2.252zm-31.261 6.752 4.8749 2.8145c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-4.6757-2.6992c0.25555-0.61604 0.52368-1.2307 0.80077-1.8477z"
-                color="#B11338" enable-background="accumulate"
-                style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#B11338;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal">
-              </path>
-              <path fill="#B11338" fill-rule="evenodd"
-                d="m41.99 28.004c-2.4131 0.0011-4.7146 0.23167-6.8163 0.65039a0.99999 1 0 0 0-0.78515 1.1758 0.99999 1 0 0 0 1.1758 0.78516c1.965-0.39147 4.1394-0.61026 6.4257-0.61133 2.2861-1e-3 4.4609 0.2168 6.4277 0.60742a0.99999 1 0 0 0 1.1758-0.78516 0.99999 1 0 0 0-0.78515-1.1758c-2.1037-0.41781-4.405-0.64759-6.8183-0.64648z"
-                color="#000" enable-background="accumulate"
-                style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal">
-              </path>
-            </svg>
-            <!-- <img src="images/pan%20borde%20rojo.png" alt="Descripción de la imagen"  class="icon-responsive-pan"> -->
-            <h3 class=" pt-2">PANADERÍA</h3>
-            <p class=" mb-0">Pan, prepizzas, bizcochos, cremonas, etc.</p>
-          </div>
-        </div>
-      </div>
-      <div class="producto-row row justify-content-center align-items-center  " id="producto_despensa" role='button'>
+                <!-- <div class="col-sm-6 px-0">
+                      <img class="img-fluid " src="images/cremona.png" alt="Descripción de la imagen">
+                    </div> -->
+                <div class="col-md-6  px-0 ">
+                    <div class="cont_img ">
+                        <img class="img" src="../static/images/cremona.png" alt="Descripción de la imagen">
+                    </div>
+                </div>
+                <div class=" tipo-producto col-md-6 d-flex justify-content-center align-items-center ">
+                    <div class="  container text-center pt-3 pb-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" enable-background="new"
+                             viewBox="0 0 64 64"
+                             id="bread">
+                            <path fill="#B11338" fill-rule="evenodd"
+                                  d="m32.211 4.6953c-2.1228 0.83132-4.3948 2.337-6.7226 4.3281-4.6555 3.9823-9.5196 9.9281-13.303 16.48-3.783 6.5524-6.5019 13.739-7.623 19.762-0.56051 3.0115-0.72818 5.7303-0.38671 7.9844 0.34147 2.2541 1.2271 4.1355 2.9004 5.1016 1.6733 0.96607 3.6528 0.63959 5.4648-0.41797 1.812-1.0576 3.6315-2.8259 5.5097-5.0664 3.11-3.71 6.3507-8.7632 9.4979-14.061 0.2581 0.43278 0.45117 0.89749 0.45117 1.1934v17c0 1.6447 1.3553 3 3 3h22c1.6447 0 3-1.3553 3-3v-17c0-0.53684 0.61308-1.6462 1.1562-2.0684 1.7559-1.3647 2.8434-3.0734 2.8437-4.9316 0-2.7826-2.2961-5.0306-5.5488-6.5625s-7.6243-2.4397-12.451-2.4375c-2.3248 0.0011-4.5403 0.21569-6.58 0.60547 1.3463-2.7095 2.5249-5.3175 3.3945-7.7031 1.0012-2.7468 1.6229-5.2047 1.6328-7.3027 0.0099-2.098-0.6978-3.9753-2.3711-4.9414-1.8049-1.065-4.059-0.67693-5.8652 0.037109zm4.8652 1.6934c0.95593 0.55191 1.3791 1.5047 1.3711 3.2012-8e-3 1.6965-0.55317 3.9973-1.5117 6.627-0.9875 2.7091-2.4395 5.7937-4.0937 9.0098-1.1864 0.34384-2.2973 0.74604-3.2929 1.2148-3.2524 1.5314-5.5488 3.7783-5.5488 6.5586 3.1e-4 1.5837 0.79479 3.0566 2.1152 4.3027-3.2171 5.4369-6.5292 10.621-9.5975 14.281-1.7981 2.1449-3.5191 3.7659-4.9843 4.6211s-2.5011 0.96598-3.457 0.41406c-0.95593-0.55192-1.6317-1.7526-1.9219-3.668-0.29016-1.9154-0.15824-4.4554 0.375-7.3203 0.52394-2.815 1.435-5.9457 2.6562-9.1562l4.4277 2.5566c1.4243 0.82235 3.2753 0.32474 4.0976-1.0996 0.82234-1.4244 0.3267-3.2753-1.0976-4.0977l-5.0292-2.9043c0.57898-1.1964 1.1994-2.3812 1.8515-3.5508l5.1777 2.9902c1.4243 0.82235 3.2753 0.3267 4.0976-1.0977s0.3267-3.2753-1.0976-4.0977l-5.0312-2.9043c0.762-1.1223 1.5514-2.2082 2.3574-3.2598l4.6738 2.6992c1.4243 0.82235 3.2753 0.3267 4.0976-1.0977 0.82234-1.4244 0.3267-3.2753-1.0976-4.0977l-3.748-2.1641c1.3128-1.411 2.6313-2.7027 3.9218-3.8066 2.2145-1.8943 4.3484-3.278 6.1523-3.9844 1.4549-0.6093 3.0957-0.80688 4.1367-0.16992zm-15.582 9.4785 4.1191 2.3789c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-4.4296-2.5566c0.43378-0.53241 0.87106-1.0487 1.3105-1.5547zm-6.0175 8.0742 5.1367 2.9648c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-5.1796-2.9902c0.34234-0.57297 0.68468-1.1454 1.043-1.707zm26.523 2.0586c4.5721-0.0021 8.7 0.88146 11.598 2.2461s4.4023 3.1182 4.4023 4.7539c-2.12e-4 1.0788-0.63 2.2326-2.0722 3.3535-1.065 0.82772-1.9277 2.1446-1.9277 3.6465v17c0 0.5713-0.4287 1-0.99999 1h-22c-0.57129 0-0.99999-0.4287-0.99999-1v-17c0-1.5019-0.86268-2.8188-1.9277-3.6465-1.4422-1.1209-2.072-2.2747-2.0722-3.3535-7e-6 -1.6318 1.5045-3.3836 4.4023-4.748 2.8978-1.3645 7.0251-2.2499 11.598-2.252zm-31.261 6.752 4.8749 2.8145c0.49475 0.28565 0.65088 0.87048 0.36523 1.3652-0.28565 0.49476-0.87047 0.65284-1.3652 0.36719l-4.6757-2.6992c0.25555-0.61604 0.52368-1.2307 0.80077-1.8477z"
+                                  color="#B11338" enable-background="accumulate"
+                                  style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#B11338;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal">
+                            </path>
+                            <path fill="#B11338" fill-rule="evenodd"
+                                  d="m41.99 28.004c-2.4131 0.0011-4.7146 0.23167-6.8163 0.65039a0.99999 1 0 0 0-0.78515 1.1758 0.99999 1 0 0 0 1.1758 0.78516c1.965-0.39147 4.1394-0.61026 6.4257-0.61133 2.2861-1e-3 4.4609 0.2168 6.4277 0.60742a0.99999 1 0 0 0 1.1758-0.78516 0.99999 1 0 0 0-0.78515-1.1758c-2.1037-0.41781-4.405-0.64759-6.8183-0.64648z"
+                                  color="#000" enable-background="accumulate"
+                                  style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;inline-size:0;isolation:auto;mix-blend-mode:normal;shape-margin:0;shape-padding:0;text-decoration-color:#000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal">
+                            </path>
+                        </svg>
+                        <!-- <img src="images/pan%20borde%20rojo.png" alt="Descripción de la imagen"  class="icon-responsive-pan"> -->
+                        <h3 class=" pt-2">PANADERÍA</h3>
+                        <p class=" mb-0">Pan, prepizzas, bizcochos, cremonas, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="{{ url_for('main.productos_despensa') }}" id="producto_despensa">
 
-        <!-- <div class=" tipo-producto col-md-6 text-center  order-2 pt-3 pb-3" > -->
-        <div class=" tipo-producto col-md-6   order-2 ">
-          <div class="  container text-center pt-3 pb-3 ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 64 64" id="cart">
-              <g fill="#B11338">
-                <path
-                  d="M48.5 45.7H18.2c-.5 0-.9-.2-1.1-.6-.3-.4-.3-.9-.1-1.3l2.6-6.6L17 12.6H8.6V9.8h9.6c.7 0 1.3.5 1.4 1.2l2.8 26.1c0 .2 0 .4-.1.7l-2 5h28.2v2.9">
-                </path>
-                <path
-                  d="m21.3 38.8-.6-2.7 31.9-6.6V18.2h-33v-2.8H54c.8 0 1.4.6 1.4 1.4v13.8c0 .7-.5 1.2-1.1 1.3l-33 6.9M49.9 54c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5zm0-8.3c-1.5 0-2.8 1.2-2.8 2.8s1.2 2.8 2.8 2.8 2.8-1.2 2.8-2.8-1.3-2.8-2.8-2.8zm-33 8.3c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5zm0-8.3c-1.5 0-2.8 1.2-2.8 2.8s1.2 2.8 2.8 2.8 2.8-1.2 2.8-2.8-1.3-2.8-2.8-2.8z">
-                </path>
-              </g>
-            </svg>
-            <h3 class=" pt-0">DESPENSA</h3>
-            <p class=" mb-0">Aceites, Harinas, Productos de limpieza, etc.</p>
-          </div>
-        </div>
+            <div class="producto-row row justify-content-center align-items-center  " role='button'>
+                <!-- <div class=" tipo-producto col-md-6 text-center  order-2 pt-3 pb-3" > -->
+                <div class=" tipo-producto col-md-6   order-2 ">
+                    <div class="  container text-center pt-3 pb-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 64 64" id="cart">
+                            <g fill="#B11338">
+                                <path
+                                        d="M48.5 45.7H18.2c-.5 0-.9-.2-1.1-.6-.3-.4-.3-.9-.1-1.3l2.6-6.6L17 12.6H8.6V9.8h9.6c.7 0 1.3.5 1.4 1.2l2.8 26.1c0 .2 0 .4-.1.7l-2 5h28.2v2.9">
+                                </path>
+                                <path
+                                        d="m21.3 38.8-.6-2.7 31.9-6.6V18.2h-33v-2.8H54c.8 0 1.4.6 1.4 1.4v13.8c0 .7-.5 1.2-1.1 1.3l-33 6.9M49.9 54c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5zm0-8.3c-1.5 0-2.8 1.2-2.8 2.8s1.2 2.8 2.8 2.8 2.8-1.2 2.8-2.8-1.3-2.8-2.8-2.8zm-33 8.3c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5 5.5 2.5 5.5 5.5-2.5 5.5-5.5 5.5zm0-8.3c-1.5 0-2.8 1.2-2.8 2.8s1.2 2.8 2.8 2.8 2.8-1.2 2.8-2.8-1.3-2.8-2.8-2.8z">
+                                </path>
+                            </g>
+                        </svg>
+                        <h3 class=" pt-0">DESPENSA</h3>
+                        <p class=" mb-0">Aceites, Harinas, Productos de limpieza, etc.</p>
+                    </div>
+                </div>
 
-        <div class="col-md-6  order-md-2 px-0 ">
-          <div class="cont_img ">
-            <img class="img" src="../static/images/carrito.jpg" alt="Descripción de la imagen">
-          </div>
-        </div>
-      </div>
+                <div class="col-md-6  order-md-2 px-0 ">
+                    <div class="cont_img ">
+                        <img class="img" src="../static/images/carrito.jpg" alt="Descripción de la imagen">
+                    </div>
+                </div>
 
+            </div>
+        </a>
     </div>
-  </section>
+</section>
 
-  <section id="galeria" class="galeria">
+<section id="galeria" class="galeria">
     <div class="container-fluid descripcion d-flex justify-content-center  align-items-center ">
-      <div class=" text-center ">
-        <h2 class="fw-bolder">GALERIA</h2>
-        <p class=""> Estos son algunas de nuestros productos que realizamos</p>
-      </div>
+        <div class=" text-center ">
+            <h2 class="fw-bolder">GALERIA</h2>
+            <p class=""> Estos son algunas de nuestros productos que realizamos</p>
+        </div>
     </div>
 
 
     <div class="row m-5">
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%201.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%201.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%202.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%202.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%203.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%203.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%204.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%204.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%205.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%205.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%206.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%206.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%207.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%207.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%209.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%209.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2010.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2010.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2011.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2011.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2012.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2012.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
 
-      <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
-        <div class="cont_img ">
-          <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
-            <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2013.jpg" alt="">
-          </a>
+        <div class=" col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4 ">
+            <div class="cont_img ">
+                <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+                    <img class="gallery-item imagen  mb-4  " src="../static/images/fotos%20panaderia/imagen%2013.jpg"
+                         alt="">
+                </a>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Modal -->
     <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body d-flex justify-content-center align-items-center">
-            <img src="../static/images/fotos%20panaderia/imagen%201.jpg" class="modal-img" alt="modal img">
-          </div>
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <img src="../static/images/fotos%20panaderia/imagen%201.jpg" class="modal-img" alt="modal img">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-  </section>
+</section>
 
 
-  <section id="nosotros" class="nosotros ">
+<section id="nosotros" class="nosotros ">
     <div class="container-fluid descripcion d-flex justify-content-center  align-items-center ">
-      <div class=" text-center ">
-        <h2 class="">¿Quiénes Somos?</h2>
-      </div>
+        <div class=" text-center ">
+            <h2 class="">¿Quiénes Somos?</h2>
+        </div>
     </div>
     <div class="container mt-5">
-      <!-- <div class="row  align-items-lg-center align-text"> -->
-      <div class="row">
-        <div class="col-md-6  my-3 d-flex justify-content-center  align-items-center ">
-          <div class="historia   ">
-            <!-- <h3 class="text-center">NOSOTROS</h3> -->
-            <!-- <p class="descripcion-panaderia px-4 px-sm-5 mt-6 fs-6"> En Panadería Ras, nuestra historia está tejida con hilos de tradición y pasión por la panadería artesanal. Desde nuestros modestos comienzos, nos hemos dedicado incansablemente a hornear productos de calidad que capturan el corazón y el paladar de nuestros clientes. Cada día, nos esforzamos por ofrecer panes frescos y deliciosos que reflejan nuestra dedicación a la excelencia y al sabor auténtico. En Panadería Ras, no solo amasamos masa, sino también momentos felices para ti y tu familia.</p> -->
-            <p class="  text-center mt-4 px-2 px-xl-5"> En Panadería Ras, nuestra historia está tejida con hilos de
-              tradición y pasión por la panadería artesanal. Desde nuestros modestos comienzos, nos hemos dedicado
-              incansablemente a hornear productos de calidad que capturan el corazón y el paladar de nuestros clientes.
-              Cada día, nos esforzamos por ofrecer panes frescos y deliciosos que reflejan nuestra dedicación a la
-              excelencia y al sabor auténtico. En Panadería Ras, no solo amasamos masa, sino también momentos felices
-              para ti y tu familia.</p>
-          </div>
+        <!-- <div class="row  align-items-lg-center align-text"> -->
+        <div class="row">
+            <div class="col-md-6  my-3 d-flex justify-content-center  align-items-center ">
+                <div class="historia   ">
+                    <!-- <h3 class="text-center">NOSOTROS</h3> -->
+                    <!-- <p class="descripcion-panaderia px-4 px-sm-5 mt-6 fs-6"> En Panadería Ras, nuestra historia está tejida con hilos de tradición y pasión por la panadería artesanal. Desde nuestros modestos comienzos, nos hemos dedicado incansablemente a hornear productos de calidad que capturan el corazón y el paladar de nuestros clientes. Cada día, nos esforzamos por ofrecer panes frescos y deliciosos que reflejan nuestra dedicación a la excelencia y al sabor auténtico. En Panadería Ras, no solo amasamos masa, sino también momentos felices para ti y tu familia.</p> -->
+                    <p class="  text-center mt-4 px-2 px-xl-5"> En Panadería Ras, nuestra historia está tejida con hilos
+                        de
+                        tradición y pasión por la panadería artesanal. Desde nuestros modestos comienzos, nos hemos
+                        dedicado
+                        incansablemente a hornear productos de calidad que capturan el corazón y el paladar de nuestros
+                        clientes.
+                        Cada día, nos esforzamos por ofrecer panes frescos y deliciosos que reflejan nuestra dedicación
+                        a la
+                        excelencia y al sabor auténtico. En Panadería Ras, no solo amasamos masa, sino también momentos
+                        felices
+                        para ti y tu familia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 align-self-center  ">
+                <div class="imagen py-3">
+
+                    <img class="img" src="../static/images/panaderia%20afuera.jpg" alt="Descripción de la imagen">
+                </div>
+            </div>
+
         </div>
-
-        <div class="col-md-6 align-self-center  ">
-          <div class="imagen py-3">
-
-            <img class="img" src="../static/images/panaderia%20afuera.jpg" alt="Descripción de la imagen">
-          </div>
-        </div>
-
-      </div>
     </div>
 
     <section id="ubicacion" class="ubicacion pt-5 ">
-      <div class="container-fluid descripcion d-flex justify-content-center  align-items-center ">
-        <div class=" text-center ">
-          <h2 class="">¿Dónde Estamos?</h2>
-          <p class="  text-center mt-4 px-2 px-xl-5">Estamos en Ireneo Portela, un pueblito situado a 30 km de Baradero,
-            provincia de Buenos Aires</p>
+        <div class="container-fluid descripcion d-flex justify-content-center  align-items-center ">
+            <div class=" text-center ">
+                <h2 class="">¿Dónde Estamos?</h2>
+                <p class="  text-center mt-4 px-2 px-xl-5">Estamos en Ireneo Portela, un pueblito situado a 30 km de
+                    Baradero,
+                    provincia de Buenos Aires</p>
+            </div>
         </div>
-      </div>
 
-      <div class="mapa pt-5 ">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4882.399526732536!2d-59.67220667989394!3d-33.98033479130967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bbd3265058d1e3%3A0xc266bef5fb8918ec!2sPanader%C3%ADa%20y%20Despensa%20RAS!5e1!3m2!1ses!2sar!4v1714929713233!5m2!1ses!2sar"
-          class="maps  style=" border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+        <div class="mapa pt-5 ">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4882.399526732536!2d-59.67220667989394!3d-33.98033479130967!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bbd3265058d1e3%3A0xc266bef5fb8918ec!2sPanader%C3%ADa%20y%20Despensa%20RAS!5e1!3m2!1ses!2sar!4v1714929713233!5m2!1ses!2sar"
+                    class="maps"
+                    style="border:0;"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+
+        </div>
     </section>
-  </section>
+</section>
 
 
-  <div class=" contacto container-fluid mt-3 pb-5">
+<div class=" contacto container-fluid mt-3 pb-5">
     <div class=" row  " id="">
-      <div class="col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center">
-        <div class=" contact-item pt-3 ps-2">
-          <div class="text"> <i class="bi bi-telephone-fill"></i>
-            Llamanos
-          </div>
-          <div class="ci-text">
-            <a>3329-601836</a>
-          </div>
+        <div class="col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center">
+            <div class=" contact-item pt-3 ps-2">
+                <div class="text"><i class="bi bi-telephone-fill"></i>
+                    Llamanos
+                </div>
+                <div class="ci-text">
+                    <a>3329-601836</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class=" col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center ">
-        <div class=" contact-item pt-3 ps-2">
-          <div class="text"> <i class="bi bi-clock-fill"></i>
-            Abrimos
-          </div>
-          <div class="ci-text">
-            Lunes a Sábado: 7 a 13 hs - 16 a 21:30 hs. <br>
-            Domingos: Cerrado.
-          </div>
+        <div class=" col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center ">
+            <div class=" contact-item pt-3 ps-2">
+                <div class="text"><i class="bi bi-clock-fill"></i>
+                    Abrimos
+                </div>
+                <div class="ci-text">
+                    Lunes a Sábado: 7 a 13 hs - 16 a 21:30 hs. <br>
+                    Domingos: Cerrado.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-center text-white ">
+<!-- Footer -->
+<footer class="bg-dark text-center text-white ">
 
     <!-- Grid container -->
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.5)">
-      © 2024 Copyright:
-      <a class="text-white text-decoration-none ">Panadería & Despensa RAS</a>
+        © 2024 Copyright:
+        <a class="text-white text-decoration-none ">Panadería & Despensa RAS</a>
     </div>
     <!-- Copyright -->
 
-  </footer>
-  <!-- Footer -->
+</footer>
+<!-- Footer -->
 
 
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="../static/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="../static/main.js"></script>
 
 </body>
 

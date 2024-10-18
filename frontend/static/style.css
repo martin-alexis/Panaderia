@@ -285,6 +285,13 @@ height: auto;
     /* background: rgba(0, 0, 0, 0.2); */
 }
 
+#producto_panaderia, #producto_despensa {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
 /*  NOSOTROS    */
 
 .nosotros {
