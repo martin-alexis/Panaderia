@@ -5,12 +5,12 @@ from sqlalchemy import Column, Integer, String, Text, Numeric, Enum
 
 
 class Tipo(enum.Enum):
-    PANADERIA = "Panaderia"
-    DESPENSA = "Despensa"
+    PANADERIA = "PANADERIA"
+    DESPENSA = "DESPENSA"
 
 class Disponibilidad(enum.Enum):
-    DISPONIBLE = "Disponible"
-    AGOTADO = "Agotado"
+    DISPONIBLE = "DISPONIBLE"
+    AGOTADO = "AGOTADO"
 
 class Productos(db.Model):
     __tablename__ = 'productos'
@@ -41,6 +41,6 @@ class Productos(db.Model):
             'descripcion': self.descripcion,
             'precio': self.precio,
             'imagen': self.imagen,
-            'disponibilidad': self.disponibilidad,
-            'tipo': self.tipo
+            'disponibilidad': self.disponibilidad.value,
+            'tipo': self.tipo.value
         }

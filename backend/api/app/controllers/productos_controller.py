@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from backend.api.app.models.productos_model import Productos
+from backend.api.app.models.productos_model import Productos, Tipo
 
 
 class ProductosController:
@@ -22,7 +22,7 @@ class ProductosController:
 
     def get_productos_panaderia(self):
         try:
-            productos = Productos.query.filter_by(tipo=Productos.tipo.PANADERIA).all()
+            productos = Productos.query.filter_by(tipo=Tipo.PANADERIA).all()
 
             if productos:
                 return jsonify([producto.to_dict() for producto in productos]), 200
@@ -34,7 +34,7 @@ class ProductosController:
 
     def get_productos_despenda(self):
         try:
-            productos = Productos.query.filter_by(tipo=Productos.tipo.DESPENSA).all()
+            productos = Productos.query.filter_by(tipo=Tipo.DESPENSA).all()
 
             if productos:
                 return jsonify([producto.to_dict() for producto in productos]), 200
