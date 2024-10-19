@@ -1,5 +1,16 @@
+import enum
+
 from app import db
 from sqlalchemy import Column, Integer, String, Text, Numeric, Enum
+
+
+class Tipo(enum.Enum):
+    PANADERIA = "Panaderia"
+    DESPENSA = "Despensa"
+
+class Disponibilidad(enum.Enum):
+    DISPONIBLE = "Disponible"
+    AGOTADO = "Agotado"
 
 class Productos(db.Model):
     __tablename__ = 'productos'
@@ -10,8 +21,8 @@ class Productos(db.Model):
     descripcion = Column(Text)
     precio = Column(Numeric(10, 0), nullable=True)
     imagen = Column(String(255), nullable=False)
-    disponibilidad = Column(Enum('Disponible', 'Agotado'), nullable=False)
-    tipo = Column(Enum('Panaderia', 'Despensa'), nullable=False)
+    disponibilidad = Column(Enum(Disponibilidad), nullable=False)
+    tipo = Column(Enum(Tipo), nullable=False)
 
     def __init__(self, nombre, unidad, descripcion, precio, imagen, disponibilidad, tipo):
         self.nombre = nombre
