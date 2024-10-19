@@ -51,7 +51,7 @@ document.addEventListener("click", function (e) {
 
 document.addEventListener("DOMContentLoaded", function () {
     function get_productos() {
-        fetch('/api/productos', {
+        fetch('/api/productos_panaderia', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
