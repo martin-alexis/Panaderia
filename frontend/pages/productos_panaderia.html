@@ -2,278 +2,196 @@
 <html lang="eS">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Panadería</title>
-  <link rel="icon" href="../static/images/logo%20panaderia.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../static/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panadería</title>
+    <link rel="icon" href="../static/images/logo%20panaderia.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 
 <body>
-  <a href="https://api.whatsapp.com/send?phone=543329601836" class="btn-wsp" target="_blank"><i
-      class="bi bi-whatsapp"></i></a>
+<a href="https://api.whatsapp.com/send?phone=543329601836" class="btn-wsp" target="_blank"><i
+        class="bi bi-whatsapp"></i></a>
 
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand" href="{{ url_for('main.main') }}#"><img src="../static/images/logo%20panaderia.png" alt="Logo Panaderia RAS"></a>
-      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
-          class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ url_for('main.main') }}#carousel">INICIO</a>
+        <a class="navbar-brand" href="{{ url_for('main.main') }}#"><img src="../static/images/logo%20panaderia.png"
+                                                                        alt="Logo Panaderia RAS"></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('main.main') }}#carousel">INICIO</a>
 
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PRODUCTOS
-            </a>
-            <ul class="dropdown-menu border-0">
-              <li><a class="dropdown-item" href="{{ url_for('main.productos_despensa') }}">DESPENSA</a></li>
-              <li><a class="dropdown-item" href="{{ url_for('main.productos_panaderia') }}">PANADERIA</a></li>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        PRODUCTOS
+                    </a>
+                    <ul class="dropdown-menu border-0">
+                        <li><a class="dropdown-item" href="{{ url_for('main.productos_despensa') }}">DESPENSA</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('main.productos_panaderia') }}">PANADERIA</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.main') }}#galeria">GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.main') }}#nosotros">¿QUIÉNES SOMOS?</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.main') }}#galeria">GALERIA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('main.main') }}#nosotros">¿QUIÉNES SOMOS?</a>
-          </li>
-        </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <div class="portada d-flex justify-content-center align-items-center">
+<div class="portada d-flex justify-content-center align-items-center">
     <div class="imagen-portada"></div>
     <div class="contenido-texto ">
-      <div>
-        <h3 class="">PANADERÍA</h3>
-      </div>
+        <div>
+            <h3 class="">PANADERÍA</h3>
+        </div>
     </div>
-  </div>
+</div>
 
+<!-- Contenedor principal -->
+<section class="cards position-relative">
 
+    <div class="container-fluid py-4">
+        <div class="row">
+            <!-- Sidebar de filtros -->
+            <div class="col-lg-3 col-md-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form class="d-flex">
+                            <input id="busqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        </form>
+                        <!-- Sección de Precio -->
+                        <div class="mb-4 mt-4">
+                            <h5 class="card-title mb-3">Precio</h5>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="precioMin" placeholder="Mínimo">
+                                        <label for="precioMin">Mínimo</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="precioMax" placeholder="Máximo">
+                                        <label for="precioMax">Máximo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-  <section class="cards position-relative">
-    <div class="container py-5">
-      <div id="cards-productos-panaderia" class="row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4 py-5">
-
-        <div class="col">
-          <div class="card no-border rounded">
-            <img src="../static/images/cards/image%2016.png" class="card-img-top " alt="...">
-            <div class="card-body">
-              <h5 class="card-title">PAN 1KG</h5>
-              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>
-              <p class="precio">$ 1400,00 </p>
+                        <!-- Sección de Disponibilidad -->
+                        <div class="mb-4">
+                            <h5 class="card-title mb-3">Disponibilidad</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="disponibleCheck">
+                                <label class="form-check-label" for="disponibleCheck">
+                                    Disponible
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agotadoCheck">
+                                <label class="form-check-label" for="agotadoCheck">
+                                    Agotado
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Contenedor de productos -->
+            <div class="col-lg-9 col-md-7 ">
+                <div id="cards-productos-panaderia" class="row row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-3 g-4">
+                    <!-- Aquí se cargarán las cards de productos -->
+                </div>
+            </div>
         </div>
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2017.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">GALLETAS 1KG</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1450,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2018.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">BIZCOCHITOS 300G</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 600,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2019.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">CREMONA</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1000,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2020.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">TRENZA</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1200,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2021.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">PREPIZZA</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 500,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2022.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body container">#}
-{#              <h5 class="card-title">PAN DE HAMBURGUESA PAQ. X 4</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>#}
-{#              <p class="precio">$ 600,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/image%2023.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">PASTELES</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>#}
-{#              <p class="precio">$ 2500,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card no-border rounded">#}
-{#            <img src="../static/images/cards/confiteria/image%2025.png" class="card-img-top " alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">ALFAJOR DE MAIZENA</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1200,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/confiteria/image%2026.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">PASTAFROLA</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>#}
-{#              <p class="precio">$ 4000,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/confiteria/image%2027.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">MASITAS</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1200,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/confiteria/image%2031.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body container">#}
-{#              <h5 class="card-title">FACTURAS 1 DOC</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-x-circle-fill"></i></p>#}
-{#              <p class="precio">$ 2500,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/confiteria/image%2028.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">MEDIALUNAS DE JAMON Y QUESO</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 1800,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="col">#}
-{#          <div class="card">#}
-{#            <img src="../static/images/cards/confiteria/image%2029.png" class="card-img-top" alt="...">#}
-{#            <div class="card-body">#}
-{#              <h5 class="card-title">SANDWICH DE MIGA PAQ. X 6</h5>#}
-{#              <p class="card-text">Disponibilidad: <i class="bi bi-check-circle-fill"></i></p>#}
-{#              <p class="precio">$ 2800,00 </p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-
-      </div>
     </div>
-  </section>
+</section>
 
-  <div class=" contacto container-fluid mt-3 pb-5">
+<style>
+    .card {
+        border: none;
+        border-radius: 12px;
+    }
+
+    .card-title {
+        color: #2d3748;
+        font-weight: 600;
+    }
+
+    .form-check-label {
+        color: #4a5568;
+    }
+
+    @media (min-width: 768px) {
+        .sidebar-fixed {
+            position: sticky;
+            top: 1rem;
+        }
+    }
+</style>
+
+<div class=" contacto container-fluid mt-3 pb-5">
     <div class=" row  " id="">
-      <div class="col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center">
-        <div class=" contact-item pt-3 ps-2">
-          <div class="text"> <i class="bi bi-telephone-fill"></i>
-            Llamanos
-          </div>
-          <div class="ci-text">
-            <a>3329-601836</a>
-          </div>
+        <div class="col-sm-12 col-md-8 d-flex justify-content-md-center align-items-center">
+            <div class=" contact-item pt-3 ps-2">
+                <div class="text"><i class="bi bi-telephone-fill"></i>
+                    Llamanos
+                </div>
+                <div class="ci-text">
+                    <a>3329-601836</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class=" col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center ">
-        <div class=" contact-item pt-3 ps-2">
-          <div class="text"> <i class="bi bi-clock-fill"></i>
-            Abrimos
-          </div>
-          <div class="ci-text">
-            Lunes a Sábado: 7 a 13 hs - 16 a 21:30 hs. <br>
-            Domingos: Cerrado.
-          </div>
+        <div class=" col-sm-12 col-md-6 d-flex justify-content-md-center align-items-center ">
+            <div class=" contact-item pt-3 ps-2">
+                <div class="text"><i class="bi bi-clock-fill"></i>
+                    Abrimos
+                </div>
+                <div class="ci-text">
+                    Lunes a Sábado: 7 a 13 hs - 16 a 21:30 hs. <br>
+                    Domingos: Cerrado.
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-center text-white ">
+<!-- Footer -->
+<footer class="bg-dark text-center text-white ">
 
     <!-- Grid container -->
 
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.5)">
-      © 2024 Copyright:
-      <a class="text-white text-decoration-none ">Panadería & Despensa RAS</a>
+        © 2024 Copyright:
+        <a class="text-white text-decoration-none ">Panadería & Despensa RAS</a>
     </div>
     <!-- Copyright -->
 
-  </footer>
-  <!-- Footer -->
+</footer>
+<!-- Footer -->
 
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-    <script src="../static/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="../static/main.js"></script>
 
 </body>
 
