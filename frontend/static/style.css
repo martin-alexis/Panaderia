@@ -398,7 +398,7 @@ height: auto;
     position: relative;
 }
 .nosotros .imagen .img{
-    background-image: url(images/panaderia\ afuera.jpg);
+    background-image: url(https://res.cloudinary.com/dfnjifn4w/image/upload/v1730819229/panaderia_afuera_j4sjnt.jpg);
     width: 100%;
     height: 450px;
     overflow: hidden;
@@ -554,23 +554,23 @@ height: auto;
     height: 70vh;
     overflow: hidden; /* Para asegurar que no se muestren partes de la imagen filtrada fuera del contenedor */
   }
-  
+  /*PORTADA PANADERIA*/
 .portada .imagen-portada {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(images/image\ \(5\).png);
+    background-image: url(https://res.cloudinary.com/dfnjifn4w/image/upload/v1730819249/image_5_yknqko.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(0.6); 
 }
-
+/*PORTADA DESPENSA*/
 .portada .imagen-portada-almacen {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(images/image\ \(6\).png);
+    background-image: url(https://res.cloudinary.com/dfnjifn4w/image/upload/v1730819256/image_6_kmjlpv.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
