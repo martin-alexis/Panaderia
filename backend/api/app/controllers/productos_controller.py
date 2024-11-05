@@ -32,9 +32,10 @@ class ProductosController:
     #     except Exception as e:
     #         return jsonify({'error': 'Ocurrió un error al obtener los productos.', 'message': str(e)}), 500
 
-    def get_productos_panaderia(self, busqueda, precio_min, precio_max, agotado, disponible):
+    def get_productos(self, busqueda, precio_min, precio_max, agotado, disponible, categoria):
         try:
-            consulta = Productos.query.filter(Productos.tipo == Tipo.PANADERIA)
+            # Llama a `filter_productos` independientemente de la categoría específica
+            consulta = Productos.query.filter(Productos.tipo == categoria)
 
             if busqueda:
                 consulta = consulta.filter(Productos.nombre.like(f"{busqueda}%"))
@@ -44,7 +45,6 @@ class ProductosController:
 
             if agotado:
                 consulta = consulta.filter(Productos.disponibilidad == Disponibilidad.AGOTADO)
-
             if disponible:
                 consulta = consulta.filter(Productos.disponibilidad == Disponibilidad.DISPONIBLE)
 
@@ -53,7 +53,7 @@ class ProductosController:
             if productos:
                 return jsonify([producto.to_dict() for producto in productos]), 200
             else:
-                return jsonify({'message': 'No hay productos regitrados.'}), 200
+                return jsonify({'message': 'No hay productos registrados.'}), 200
 
         except Exception as e:
             return jsonify({'error': 'Ocurrió un error al obtener los productos.', 'message': str(e)}), 500

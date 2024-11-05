@@ -239,9 +239,10 @@ document.addEventListener("click", function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
     const busqueda = document.getElementById('busqueda');
-    const cardsPanaderia = document.getElementById('cards-productos-panaderia');
+    const cardsContainer = document.getElementById('cards-productos');
     const disponibleCheck = document.getElementById('disponibleCheck');
     const agotadoCheck = document.getElementById('agotadoCheck');
+    const categoria = cardsContainer.getAttribute('data-categoria');
     let timeoutId;
 
     function getFilters() {
@@ -256,6 +257,35 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+    function renderProducts(data, container) {
+        container.innerHTML = ''; // Limpiar resultados anteriores
+        let html = ''; // HTML acumulado
+
+        data.forEach(d => {
+            const icono = d.disponibilidad === "AGOTADO"
+                ? "bi bi-x-circle-fill text-danger"
+                : "bi bi-check-circle-fill text-success";
+
+            html += `
+                <div class="col">
+                    <div class="card product-card">
+                        <img src="${d.imagen}" class="card-img-top" alt="${d.nombre}">
+                        <div class="card-body">
+                            <h5 class="card-title">${d.nombre}</h5>
+                            <p class="card-text unidad">${d.unidad}</p>
+                            <div class="d-flex align-items-center">
+                                <i class="${icono} me-2"></i>
+                                <span>${d.disponibilidad}</span>
+                            </div>
+                            <p class="precio">$ ${d.precio.toLocaleString()}</p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        container.innerHTML = html; // Insertar HTML acumulado
+    }
+
     function buscarProductos(searchTerm = '') {
         const { precioMin, precioMax, disponibleCheck, agotadoCheck } = getFilters();
 
@@ -266,55 +296,27 @@ document.addEventListener('DOMContentLoaded', function () {
             precio_max: precioMax,
             disponible: disponibleCheck,
             agotado: agotadoCheck,
+            categoria // Añadir categoría a los parámetros
         });
 
         // Realizar la petición al backend
-        fetch(`/api/buscar?${params.toString()}`)
+        fetch(`/api/productos/categoria?${params.toString()}`)
             .then(response => {
                 if (!response.ok) throw new Error('Error al buscar productos');
                 return response.json();
             })
             .then(data => {
-                cardsPanaderia.innerHTML = ''; // Limpiar resultados anteriores
-
-                let html = ''; // HTML acumulado
-
-                data.forEach(d => {
-                    const icono = d.disponibilidad === "AGOTADO"
-                        ? "bi bi-x-circle-fill text-danger"
-                        : "bi bi-check-circle-fill text-success";
-
-                    html += `
-                        <div class="col">
-                            <div class="card product-card">
-                                <img src="${d.imagen}" class="card-img-top" alt="${d.nombre}">
-                                <div class="card-body">
-                                    <h5 class="card-title">${d.nombre}</h5>
-                                    <p class="card-text">${d.descripcion}</p>
-                                    <p class="card-text unidad">${d.unidad}</p>
-                                    <div class="d-flex align-items-center">
-                                        <i class="${icono} me-2"></i>
-                                        <span>${d.disponibilidad}</span>
-                                    </div>
-                                    <p class="precio">$ ${d.precio.toLocaleString()}</p>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-
-                cardsPanaderia.innerHTML = html; // Insertar HTML acumulado
+                renderProducts(data, cardsContainer); // Llamar a la función de renderizado
             })
             .catch(error => {
                 console.error('Error:', error);
-                console.error('Error:', error);
-                cardsPanaderia.innerHTML = `
-                    <div class="container-fluid descripcion d-flex justify-content-center  align-items-center" >
+                cardsContainer.innerHTML = `
+                    <div class="container-fluid descripcion d-flex justify-content-center align-items-center" >
                         <div class="text-center" role="alert">
                             No se encontraron productos
                         </div>
                     </div>
                 `;
-
             });
     }
 
