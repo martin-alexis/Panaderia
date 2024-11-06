@@ -22,10 +22,5 @@ def get_productos_categoria():
     categoria = request.args.get('categoria')
 
     controller = ProductosController()
-    return controller.get_productos(busqueda, precio_min, precio_max, agotado, disponible, categoria)
+    return controller.get_productos_categoria(busqueda, precio_min, precio_max, agotado, disponible, categoria)
 
-@productos_bp.route('/api/productos_despensa', methods=['GET'])
-def get_productos_despensa():
-
-    controller = ProductosController()
-    return controller.get_productos_despenda()
