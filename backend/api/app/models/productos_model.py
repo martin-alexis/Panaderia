@@ -1,6 +1,6 @@
 import enum
 
-from app import db
+from backend.api.app import db
 from sqlalchemy import Column, Integer, String, Text, Numeric, Enum
 
 
