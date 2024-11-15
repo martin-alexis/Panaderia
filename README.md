@@ -1,22 +1,32 @@
-Aplicación web - Panadería
-Esta página web muestra diferentes secciones como: inicio, quienes somos, galería y productos (Panadería y Despensa).
-En las secciones de productos se puede filtrar por:
+# **Aplicación Web - Panadería**
 
-Búsqueda
-Agotado - Disponible
-Precio máximo - Precio mínimo
+Esta aplicación web está diseñada para ofrecer una experiencia sencilla y eficiente al explorar los productos y servicios de la panadería.  
 
-Puedes acceder a la página en: https://panaderia-0in4.onrender.com/
-Nota: La primera vez se tiene que esperar 60 segundos para visualizarla.
-Tecnologías utilizadas:
+## **Características principales**
+La página cuenta con diferentes secciones:
+- **Inicio**  
+- **Quiénes somos**  
+- **Galería**  
+- **Productos**:  
+  - Categorías: *Panadería* y *Despensa*.  
+  - Opciones de filtrado:  
+    - Búsqueda por nombre.  
+    - Estado: Agotado o Disponible.  
+    - Rango de precios: Precio mínimo y máximo.  
 
-HTML
-CSS
-Bootstrap
-JavaScript
-Python
-Flask
-SQLAlchemy
-MySQL
+### **Acceso a la página**
+[Visita la página aquí](https://panaderia-0in4.onrender.com/)  
+**Nota:** La primera vez que accedas, es posible que debas esperar aproximadamente **60 segundos** para que se cargue completamente.
 
-Documentación en Postman: https://documenter.getpostman.com/view/38249888/2sAYBPkE4R CopyRetryClaude does not have internet access. Links provided may not be accurate or up to date.H
+---
+
+## **Tecnologías utilizadas**
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript.  
+- **Backend**: Python (Flask).  
+- **Base de datos**: SQLAlchemy y MySQL.  
+
+---
+
+## **Documentación**
+Puedes consultar la documentación completa de la API en Postman:  
+[Documentación en Postman](https://documenter.getpostman.com/view/38249888/2sAYBPkE4R)
