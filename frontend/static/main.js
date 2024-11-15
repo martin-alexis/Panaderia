@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error('Error:', error);
                 cardsContainer.innerHTML = `
                     <div class="container-fluid descripcion d-flex justify-content-center align-items-center" >
-                        <div class="text-center" role="alert">
+                        <div class="text-center mt-5" role="alert">
                             No se encontraron productos
                         </div>
                     </div>
