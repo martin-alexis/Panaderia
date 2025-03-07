@@ -1,5 +1,5 @@
-.sqlite
-.db
+*.sqlite
+*.db
 .env
 venv/
 node_modules/
