@@ -15,7 +15,7 @@ class Config:
 
     @staticmethod
     def select_config(app):
-        env = os.getenv("FLASK_ENV", "development")
+        env = os.getenv("FLASK_ENV")
 
         if env == "testing":
             app.config.from_object("api.config.TestConfig")
@@ -23,6 +23,8 @@ class Config:
             app.config.from_object("api.config.ProductionConfig")
         elif env == "development":
             app.config.from_object("api.config.DevelopmentConfig")
+        else:
+            raise ValueError("FLASK_ENV no está definido o tiene un valor incorrecto")
 
         return app
 
@@ -30,7 +32,7 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     basedir = os.path.abspath(os.path.dirname(__file__))
-    SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(basedir, 'development.db')}"
+    SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(basedir, 'development.sqlite')}"
 
 class ProductionConfig(Config):
     DEBUG = False
@@ -56,7 +58,7 @@ class ProductionConfig(Config):
 class TestConfig(Config):
     TESTING = True
     basedir = os.path.abspath(os.path.dirname(__file__))
-    SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(basedir, 'test.db')}"
+    SQLALCHEMY_DATABASE_URI = f"sqlite:///{os.path.join(basedir, 'test.sqlite')}"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = True
 
