@@ -13,8 +13,7 @@ def create_app():
                 static_folder='../../../frontend/static')
 
     CORS(app)
-    app.config.from_object(Config)
-
+    Config.select_config(app)
     db.init_app(app)
 
     # Import and register the route blueprint
@@ -23,11 +22,5 @@ def create_app():
 
     from .routes.productos_route import productos_bp
     app.register_blueprint(productos_bp, url_prefix='/')
-    #
-    # from .routes.usuarios_route import usuarios_bp
-    # app.register_blueprint(usuarios_bp, url_prefix='/')
-    #
-    # from .routes.auth_route import auth_bp
-    # app.register_blueprint(auth_bp, url_prefix='/')
 
     return app
