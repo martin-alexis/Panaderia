@@ -1,5 +1,5 @@
-test.db
-development.db
+.sqlite
+.db
 .env
 venv/
 node_modules/
