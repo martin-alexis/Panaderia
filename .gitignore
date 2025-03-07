@@ -1,5 +1,9 @@
+test.db
+development.db
 .env
 venv/
 node_modules/
 __pycache__/
 *.pyc
+*.log
+logs/
