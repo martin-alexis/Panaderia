@@ -22,8 +22,8 @@ La página cuenta con diferentes secciones:
 
 ## **Tecnologías utilizadas**
 - **Frontend**: HTML, CSS, Bootstrap, JavaScript.  
-- **Backend**: Python (Flask).  
-- **Base de datos**: SQLAlchemy y MySQL.  
+- **Backend**: Python (Flask), SQLAlchemy.  
+- **Base de datos**: MySQL.  
 
 ---
 
